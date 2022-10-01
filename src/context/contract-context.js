@@ -10,7 +10,7 @@ const ContractContextProvider = ({ children }) => {
     useSetPersistStore(store);
 
     const connectWallet = async () => {
-        if (!ethereum) return toast.error("You must install Coinbase wallet in your browser extension.")
+        if (!ethereum) return toast.error("You must install Metamask in your browser extension.")
         const notification = toast.loading("Connecting wallet")
         try {
             const selectedAccount = await ethereum
@@ -19,7 +19,6 @@ const ContractContextProvider = ({ children }) => {
                 .catch(() => {
                     throw Error("No account selected");
                 })
-
             setStore(prevState => ({
                 ...prevState,
                 account: selectedAccount,
@@ -82,7 +81,6 @@ const ContractContextProvider = ({ children }) => {
         checkIfWalletConnected()
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-
 
     return (
         <ContractContext.Provider value={{ connectWallet, setStore, ...store }}>
