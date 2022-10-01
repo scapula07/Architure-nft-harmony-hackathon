@@ -3,18 +3,22 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    font-family: Ubuntu;
-  }
+	html {
+		font-family: Ubuntu;
+	}
 
-  body {
-	background: #1B1C1E;
-  }
+	body {
+		background: #1b1c1e;
+	}
 }
 
 @layer components {
 	.layout-container {
 		@apply w-11/12 mx-auto;
+	}
+
+	.section-heading {
+		@apply text-white font-bold text-lg md:text-2xl lg:text-[32px] lg:leading-[37px];
 	}
 
 	.error {

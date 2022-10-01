@@ -5,7 +5,7 @@ import FavoriteIcon from "assests/landingPage/new-collections/favorite.png"
 const NewCollection = () => {
     return (
         <section className="layout-container mt-20">
-            <h1 className="text-white font-bold text-lg md:text-2xl lg:text-[32px] lg:leading-[37px]">New Collections</h1>
+            <h1 className="section-heading">New Collections</h1>
 
             <div className="mt-5 lg:mt-[33px] space-y-10 md:space-y-0 md:gap-5 lg:gap-6 md:grid grid-cols-2 lg:grid-cols-3">
                 {
