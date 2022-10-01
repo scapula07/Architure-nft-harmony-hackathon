@@ -6,6 +6,10 @@
   html {
     font-family: Ubuntu;
   }
+
+  body {
+	background: #1B1C1E;
+  }
 }
 
 @layer components {
