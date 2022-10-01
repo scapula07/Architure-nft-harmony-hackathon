@@ -13,7 +13,7 @@ const CreateNft = () => {
                     <Button
                         href='/create-nft'
                         title="create nft"
-                        className="w-[100px] h-8 mx-auto md:mx-0 md:ml-auto md:w-[105px] md:h-10 md:rounded-[40px]"
+                        className="w-[100px] font-medium h-8 mx-auto md:mx-0 md:ml-auto md:w-[105px] md:h-10 md:rounded-[40px]"
                     />
                 </div>
             </div>

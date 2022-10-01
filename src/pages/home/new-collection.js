@@ -1,5 +1,5 @@
 import { newCollections } from "utils/data"
-
+import HarmonySymbolIcon from "assests/misc/harmony.svg"
 import FavoriteIcon from "assests/landingPage/new-collections/favorite.png"
 
 const NewCollection = () => {
@@ -22,7 +22,10 @@ const NewCollection = () => {
                                 </div>
                                 <div>
                                     <h1 className="text-[#95979F] capitalize text-sm md:text-base md:leading-[18px]">Price</h1>
-                                    <p className="text-white md:text-xl md:leading-[23px]">{item.price} ONE</p>
+                                    <div className="flex items-center space-x-2">
+                                        <img src={HarmonySymbolIcon} className="h-3 w-3" alt="" />
+                                        <p className="text-white">{item.price} ONE</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

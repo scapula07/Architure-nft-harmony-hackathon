@@ -11,7 +11,7 @@ const Hero = () => {
                 <p className='text-b3 mb-4 xl:mb-8 xl:text-xl xl:leading-[23px]'>Browse and build your collection of the world's most cutting-edge architectural designs</p>
                 <Button
                     title="Discover collections"
-                    className="w-[150px] xl:w-[217px] font-medium xl:text-base xl:leading-[18px] rounded-none h-10"
+                    className="w-[180px] xl:w-[217px] font-medium xl:text-base xl:leading-[18px] rounded-[40px] h-10 "
                 />
             </div>
             <div className="flex justify-end">
