@@ -1,10 +1,10 @@
 import { useRef } from "react";
 import { XMarkIcon } from "@heroicons/react/24/solid";
-// import { useContractContext } from "src/context/ContractContext";
-// import { formatWalletAddress } from "src/utils/helpers/wallet.helpers";
 import useOnClickOutside from "hooks/useOnClickOutside.hook";
 import { navbarLinks } from "utils/data";
 import Button from "component/button";
+import { useContractContext } from "context/contract-context";
+import { formatWalletAddress } from "utils/helpers/format.helper";
 
 const Sidebar = ({ isOpen, toggleMenu, setIsOpen }) => {
     const sideBarRef = useRef(null);
@@ -15,13 +15,13 @@ const Sidebar = ({ isOpen, toggleMenu, setIsOpen }) => {
 
     useOnClickOutside(sideBarRef, clickOutsideHandler);
 
-    // const { connectWallet, isWalletConnected, account } = useContractContext()
+    const { connectWallet, isWalletConnected, account } = useContractContext()
 
-    // const handleConnectWallet = () => {
-    //     if (!isWalletConnected) {
-    //         connectWallet();
-    //     }
-    // }
+    const handleConnectWallet = () => {
+        if (!isWalletConnected) {
+            connectWallet();
+        }
+    }
 
     return isOpen ? (
         <div className={`bg-black/80 w-full fixed h-screen top-0 left-0 z-[200] overflow-y-hidden md:hidden`}>
@@ -43,10 +43,9 @@ const Sidebar = ({ isOpen, toggleMenu, setIsOpen }) => {
                     ))}
                 </ul>
                 <Button
-                    title="connect wallet"
-                    // title={isWalletConnected ? formatWalletAddress(account) : "connect wallet"}
+                    title={isWalletConnected ? formatWalletAddress(account) : "connect wallet"}
                     className="w-[117px] h-8"
-                // onClick={handleConnectWallet}
+                    onClick={handleConnectWallet}
                 />
             </aside>
         </div>
