@@ -9,13 +9,13 @@ const initialState = {
 
 const useSetPersistStore = (store) => {
 	useEffect(() => {
-		localStorage.setItem("persist-radenu-protocol", JSON.stringify(store));
+		localStorage.setItem("persist-vitruvius-protocol", JSON.stringify(store));
 		//eslint-disable-next-line
 	}, [store]);
 };
 
 const useGetPersistedStore = () =>
-	JSON.parse(localStorage.getItem("persist-radenu-protocol")) ||
+	JSON.parse(localStorage.getItem("persist-vitruvius-protocol")) ||
 	initialState;
 
 export { useSetPersistStore, useGetPersistedStore, initialState };

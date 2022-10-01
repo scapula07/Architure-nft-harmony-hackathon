@@ -5,6 +5,7 @@ import Button from "component/button"
 import { XMarkIcon } from "@heroicons/react/24/solid"
 import MetaMask from "assests/modal/metamask.svg"
 
+
 const ConnectWalletModal = ({ setShowConnectWalletModal, showConnectWalletModal }) => {
 
     const { connectWallet } = useContractContext()
@@ -42,7 +43,6 @@ const ConnectWalletModal = ({ setShowConnectWalletModal, showConnectWalletModal 
 
                         </Dialog.Title>
                         <section className="my-6">
-                            {/* <img src={Coinbase} alt="" className="h-8 w-8" /> */}
                             <p className="font-bold text-base leading-[18px] text-center text-[#475467]">Link your wallet and account to continue</p>
                             <div className="bg-[#1E2024] py-[31px] pl-3 mt-8">
                                 <div className="flex items-center space-x-3">
@@ -56,7 +56,11 @@ const ConnectWalletModal = ({ setShowConnectWalletModal, showConnectWalletModal 
                             </div>
 
                             <div className="flex items-center justify-end">
-                                <Button onClick={handleConnectWallet} title="connect" className="w-[90px] h-8 mt-5" />
+                                <Button
+                                    title="connect"
+                                    handleClick={handleConnectWallet}
+                                    className="w-[90px] h-8 mt-5"
+                                />
                             </div>
                         </section>
                     </div>
