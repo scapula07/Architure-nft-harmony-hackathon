@@ -1,5 +1,7 @@
 import { newCollections } from "utils/data"
 
+import FavoriteIcon from "assests/landingPage/new-collections/favorite.png"
+
 const NewCollection = () => {
     return (
         <section className="layout-container mt-20">
@@ -9,7 +11,10 @@ const NewCollection = () => {
                 {
                     newCollections.map((item, index) => (
                         <div key={index} className="bg-[#2D2D2D] rounded-lg px-3 pb-6 pt-3">
-                            <img src={item.image} alt="" />
+                            <div className="relative">
+                                <img src={item.image} className="w-full" alt="" />
+                                <img src={FavoriteIcon} alt="" className="absolute right-5 top-5" />
+                            </div>
                             <div className="mt-10 flex justify-between items-center">
                                 <div>
                                     <h1 className="text-white font-medium capitalize md:text-xl md:leading-[23px] mb-2">{item.nftName}</h1>
