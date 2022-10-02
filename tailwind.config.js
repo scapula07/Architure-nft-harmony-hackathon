@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}",],
   theme: {
     extend: {
+      fontFamily: {
+				ubuntu: ['Ubuntu', 'sans-serif'],
+			},
       colors: {
         b1: '#1B1C1E',
         b3: '#656B8A',

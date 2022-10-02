@@ -37,7 +37,7 @@ const Layout = ({ children }) => {
         <div className="flex flex-col min-h-screen">
             <div className="content">
                 <Navbar />
-                <div className="">
+                <div className="mt-14 md:mt-[86px]">
                     {children}
                 </div>
             </div>
