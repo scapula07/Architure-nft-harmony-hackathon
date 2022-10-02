@@ -7,13 +7,14 @@ import TopNftCreator from "./top-nft-creator"
 
 const Home = () => {
     return (
-        <Layout>
+        <>
             <Hero />
             <NewCollection />
             <TopCollection />
-            <TopNftCreator/>
+            <TopNftCreator />
             <CreateNft />
-        </Layout>)
+        </>
+    )
 }
 
 export default Home

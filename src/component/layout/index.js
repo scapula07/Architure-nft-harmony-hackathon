@@ -1,13 +1,13 @@
 import { useContractContext } from "context/contract-context"
 import { useEffect } from "react"
 import toast from "react-hot-toast"
+import { Outlet } from "react-router-dom"
 import { ethereum, web3 } from "utils/constants"
 import { handleNetworkSwitch, isHarmonyNetwork } from "utils/helpers/network-switch.helper"
-// import { handleNetworkSwitch } from "utils/helpers/nerwork-switch.helper"
 import Footer from "./footer"
 import Navbar from "./navbar"
 
-const Layout = ({ children }) => {
+const Layout = () => {
     const { isWalletConnected } = useContractContext()
 
     const networkChanged = async (chainId) => {
@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
             <div className="content">
                 <Navbar />
                 <div className="mt-14 md:mt-[86px]">
-                    {children}
+                    <Outlet />
                 </div>
             </div>
             <Footer />
