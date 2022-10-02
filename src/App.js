@@ -1,13 +1,13 @@
-import Home from "pages/home"
 import { Toaster } from "react-hot-toast"
+import AppRouter from "router"
 
 
 const App = () => {
   return (
     <>
-      <Toaster />
-      <Home />
-    </>
+			<Toaster />
+			<AppRouter />
+		</>
   )
 }
 

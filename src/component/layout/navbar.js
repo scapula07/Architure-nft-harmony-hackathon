@@ -4,6 +4,7 @@ import Button from 'component/button'
 import ConnectWalletModal from 'component/modal/connect-wallet-modal'
 import { useContractContext } from 'context/contract-context'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { navbarLinks } from 'utils/data'
 import { formatWalletAddress } from 'utils/helpers/format.helper'
 import SideBar from './sidebar'
@@ -39,7 +40,12 @@ const Navbar = () => {
                     <nav className='hidden md:flex items-center space-x-8'>
                         <ul className='text-stroke text-sm leading-4 space-x-8'>
                             {navbarLinks.map((item, index) => (
-                                <a key={index} href={item.to}>{item.name}</a>
+                                <Link
+                                    key={index}
+                                    to={item.to}
+                                >
+                                    {item.name}
+                                </Link>
                             ))}
                         </ul>
 
