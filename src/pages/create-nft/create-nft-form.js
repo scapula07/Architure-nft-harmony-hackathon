@@ -5,7 +5,7 @@ import FileUpload from 'component/input/file-upload';
 import Button from 'component/button';
 import CheckBox from 'component/input/checkbox';
 
-const CreateNftForm = ({setShowListNftModal}) => {
+const CreateNftForm = ({setShowModal}) => {
     const initialFormData = {
         name: '',
         url: '',
@@ -40,7 +40,7 @@ const CreateNftForm = ({setShowListNftModal}) => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        setShowListNftModal(true)
+        setShowModal(true)
         console.log(formData)
     }
 

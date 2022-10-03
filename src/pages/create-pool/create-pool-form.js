@@ -1,11 +1,12 @@
 import Button from "component/button"
 import TextInput from "component/input/text-input"
+import withTransactionModal from "HOC/withTransactionModal";
 import { useState } from "react";
 
-const CreatePoolForm = () => {
+const CreatePoolForm = ({ setShowModal }) => {
     const initialFormData = {
         name: '',
-        minimumStake:'',
+        minimumStake: '',
         numberOfStakers: '',
         amount: ''
 
@@ -22,6 +23,8 @@ const CreatePoolForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault()
+        setShowModal(true)
+        console.log("pool created")
     }
     return (
         <form className='space-y-8 mt-8'>
@@ -79,4 +82,4 @@ const CreatePoolForm = () => {
     )
 }
 
-export default CreatePoolForm
+export default withTransactionModal(CreatePoolForm)

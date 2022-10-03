@@ -3,14 +3,14 @@ import { XMarkIcon } from "@heroicons/react/24/solid"
 import Button from "component/button"
 import { Fragment } from "react"
 
-const ListNftModal = ({ showListNftModal, setShowListNftModal }) => {
+const TransactionAlertModal = ({setShowModal, showModal }) => {
 
-    const handleClose = () => setShowListNftModal(false)
+    const handleClose = () => setShowModal(false)
 
     return (
         <Transition
             appear
-            show={showListNftModal}
+            show={showModal}
             as={Fragment}
         >
             <Dialog
@@ -50,4 +50,4 @@ const ListNftModal = ({ showListNftModal, setShowListNftModal }) => {
     )
 }
 
-export default ListNftModal
+export default TransactionAlertModal
