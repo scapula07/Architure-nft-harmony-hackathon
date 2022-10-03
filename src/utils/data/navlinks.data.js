@@ -9,7 +9,7 @@ export const navbarLinks = [
     },
     {
         name : 'Create',
-        to: '/'
+        to: '/create-nft'
     },
 
 ]
