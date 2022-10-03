@@ -14,7 +14,7 @@ const TopCollection = () => {
                                 <p className="text-white md:text-xl md:leading-[23px]">{index + 1}</p>
                                 <div className='flex space-x-4 items-center'>
                                     {/* <div className="h-10 w-10 bg-[#D9D9D9] rounded-full" /> */}
-                                    <divc className="">
+                                    <div>
                                         <h2 className="font-medium text-sm capitalize text-white mb-[9px]">{item.name}</h2>
                                         <div className="flex space-x-3 items-center">
                                             <p className="text-xs leading-[14px] capitalize text-[#95979F]">floor price</p>
@@ -23,7 +23,7 @@ const TopCollection = () => {
                                                 <p className="text-sm leading-4 text-[#95979F]">{item.floorPrice}</p>
                                             </div>
                                         </div>
-                                    </divc>
+                                    </div>
                                 </div>
                             </div>
                             <div className='flex justify-end'>

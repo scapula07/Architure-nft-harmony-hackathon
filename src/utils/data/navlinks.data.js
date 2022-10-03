@@ -5,7 +5,7 @@ export const navbarLinks = [
     },
     {
         name : 'Stake',
-        to: '/'
+        to: '/stake'
     },
     {
         name : 'Create',
