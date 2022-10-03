@@ -1,7 +1,7 @@
 import { useContractContext } from "context/contract-context"
 import { useEffect } from "react"
 import toast from "react-hot-toast"
-import { Outlet } from "react-router-dom"
+import { Outlet, ScrollRestoration } from "react-router-dom"
 import { ethereum, web3 } from "utils/constants"
 import { handleNetworkSwitch, isHarmonyNetwork } from "utils/helpers/network-switch.helper"
 import Footer from "./footer"
@@ -38,6 +38,7 @@ const Layout = () => {
             <div className="content">
                 <Navbar />
                 <div className="mt-14 md:mt-[86px]">
+                    <ScrollRestoration />
                     <Outlet />
                 </div>
             </div>
