@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { footerLinks } from "utils/data";
 
 
@@ -12,13 +13,13 @@ const Footer = () => {
       {/* footer links */}
       <div className='space-x-4 mt-2 text-center'>
         {footerLinks.map((url, index) => (
-          <a
+          <Link 
             key={index}
-            href={url.link}
+            to={url.link}
             className="font-medium text-base leading-[30px]"
           >
             {url.name}
-          </a>
+          </Link>
         ))}
       </div>
     </footer>

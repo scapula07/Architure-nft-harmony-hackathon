@@ -1,18 +1,19 @@
+import { Link } from "react-router-dom"
 import { twMerge } from "tailwind-merge"
 
 const Button = ({ title, className, handleClick, href }) => {
     return href ? (
-        <a
-            href={href}
+        <Link
+            to={href}
             className={twMerge(`flex items-center justify-center text-white capitalize text-sm leading-4 rounded-[28px] bg-p2 ${className}`)}
         >
             {title}
-        </a>
+        </Link>
     ) :
         (
             <button
                 onClick={handleClick}
-                className={twMerge(`flex items-center justify-center text-white capitalize text-sm leading-4 rounded-[28px] bg-p2 ${className}`)}
+                className={twMerge(`flex items-center justify-center w-full text-white font-medium capitalize text-sm leading-4 rounded-[28px] bg-p2 ${className}`)}
             >
                 {title}
             </button>

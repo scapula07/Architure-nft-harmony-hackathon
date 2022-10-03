@@ -21,6 +21,10 @@
 		@apply text-white font-bold text-lg md:text-2xl lg:text-[32px] lg:leading-[37px];
 	}
 
+	.label {
+		@apply block mb-2 font-medium text-base leading-[18px] capitalize text-[#F5F5F5];																																																															
+	}
+
 	.error {
 		@apply border border-red-500;
 	}
@@ -28,4 +32,15 @@
 
 .content {
 	flex: 1 0 auto;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	transition: background-color 5000s ease-in-out 0s;
+}
+
+input:-webkit-autofill {
+	-webkit-text-fill-color: #62646C !important;
 }
