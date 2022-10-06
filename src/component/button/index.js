@@ -5,7 +5,7 @@ const Button = ({ title, className, handleClick, href }) => {
     return href ? (
         <Link
             to={href}
-            className={twMerge(`flex items-center justify-center text-white capitalize text-sm leading-4 rounded-[28px] bg-p2 ${className}`)}
+            className={twMerge(`flex items-center justify-center text-[#1B1C1E] capitalize text-sm leading-4 rounded-[4px] bg-gradient-to-r from-[#87F3FD] to-[#66A8FF] ${className}`)}
         >
             {title}
         </Link>
@@ -13,7 +13,7 @@ const Button = ({ title, className, handleClick, href }) => {
         (
             <button
                 onClick={handleClick}
-                className={twMerge(`flex items-center justify-center w-full text-white font-medium capitalize text-sm leading-4 rounded-[28px] bg-p2 ${className}`)}
+                className={twMerge(`flex items-center justify-center w-full text-[#1B1C1E] font-medium capitalize text-sm leading-4 rounded-[4px] bg-gradient-to-r from-[#87F3FD] to-[#66A8FF] ${className}`)}
             >
                 {title}
             </button>
