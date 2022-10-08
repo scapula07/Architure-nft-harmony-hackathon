@@ -5,6 +5,7 @@ import { navbarLinks } from "utils/data";
 import Button from "component/button";
 import { useContractContext } from "context/contract-context";
 import { formatWalletAddress } from "utils/helpers/format.helper";
+import { Link } from "react-router-dom";
 
 const Sidebar = ({ isOpen, toggleMenu, setIsOpen }) => {
     const sideBarRef = useRef(null);
@@ -37,8 +38,8 @@ const Sidebar = ({ isOpen, toggleMenu, setIsOpen }) => {
                 </div>
                 <ul>
                     {navbarLinks.map((item, index) => (
-                        <li key={index} className="mb-[38px]">
-                            <a href={item.link} className="text-[#111111] text-base leading-[21px] capitalize">{item.name}</a>
+                        <li key={index} className="mb-[38px]" onClick={()=>setIsOpen(false)}>
+                            <Link to={item.to} className="text-[#111111] text-base leading-[21px] capitalize">{item.name}</Link>
                         </li>
                     ))}
                 </ul>

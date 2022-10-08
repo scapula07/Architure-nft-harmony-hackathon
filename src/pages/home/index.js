@@ -1,4 +1,3 @@
-import Layout from "component/layout"
 import CreateNft from "./create-nft"
 import Hero from "./hero"
 import NewCollection from "./new-collection"
